@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&family=Roboto:wght@300&display=swap');
+*{
+margin:0;    
+padding:0;
+box-sizing:border-box;
+} 
+
+body{
+background:#232228;   
+font-family: 'poppins', sans-serif;
+}
+
+.search-box{
+height:50px;       
+width:250px;
+background:#232228;   
+border-radius:5px;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+display:flex;
+align-self:center;
+justify-content:center;
+}
+
+.search-box > label{
+position:absolute; 
+left:13px;
+color:grey;
+transform:translateY(13px);
+transition:all .2s;
+}
+
+.search-box > input{
+all:unset;   
+height:38px;
+width:230px;
+padding:5px;
+padding-left:10px;
+border-radius:5px;
+color:white;
+border:1px solid grey;
+font-size:15px;
+}
+
+.search-box > input:focus, 
+.search-box > input:valid{
+border-color:#FF0050;       
+}
+
+.search-box > input:focus ~ label,
+.search-box > input:valid ~ label{
+transform:translateY(-9px); 
+font-size:12px;
+background:#232228;  
+padding-left:3px;
+padding-right:3px;
+border-left:1px solid #FF0050;
+border-right:1px solid #FF0050;
+letter-spacing:2px;
+color:#FF0050;
+}
